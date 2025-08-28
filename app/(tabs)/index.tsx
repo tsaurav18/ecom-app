@@ -5,6 +5,8 @@ import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import NewArrivalsSection from '@/components/pages/NewArrivalsSection';
+
 
 export default function HomeScreen() {
   return (
@@ -16,9 +18,10 @@ export default function HomeScreen() {
           style={styles.reactLogo}
         />
       }>
+
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
-        <HelloWave />
+            <NewArrivalsSection />
+  
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Step 1: Try it</ThemedText>
@@ -57,9 +60,9 @@ export default function HomeScreen() {
 
 const styles = StyleSheet.create({
   titleContainer: {
+    flex:1,
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 8,
   },
   stepContainer: {
     gap: 8,
