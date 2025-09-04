@@ -1,17 +1,22 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
+    "allowJs": true, 
     "strict": true,
+    "baseUrl": ".",     
     "paths": {
-      "@/*": [
-        "./*"
-      ],
-      "@components/*": ["components/*"],
-      "@assets/*": ["assets/*"]
-      
+      "@/*": ["./*"],
+      "@components/*": ["./components/*"],
+      "@assets/*": ["./assets/*"],
+      "@constants/*": ["./constants/*"],
+      "@hooks/*":["./hooks/*"],
+    
+
     }
   },
   "include": [
+    "**/*.js",
+    "**/*.jsx",
     "**/*.ts",
     "**/*.tsx",
     ".expo/types/**/*.ts",
